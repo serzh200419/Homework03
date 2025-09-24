@@ -1,0 +1,8 @@
+Homework 3 Report – Processes
+
+In this homework, I completed five assignments to practice process creation, synchronization, cleanup, and exit behavior in C. For Assignment 1, I used fork() to create a child process. The child printed its PID and exited, while the parent printed its PID without waiting. This helped me understand that a child process runs independently after a fork. In Assignment 2, I used wait() and waitpid() so the parent could wait for child processes to finish and check their exit status. I observed how synchronization ensures that the parent knows when a child has completed.
+
+For Assignment 3, I explored atexit() by registering two functions to run when the program terminates. The output showed that the functions run in last-in, first-out order, which is useful for cleanup tasks like closing files or freeing memory automatically. In Assignment 4, I created two child processes with different exit codes and used waitpid() in the parent to retrieve their exit statuses. This showed how a parent can detect whether children exited normally or with an error. Finally, in Assignment 5, I first created a child process without wait(), observed it as a zombie using ps, and then fixed it by adding wait() in the parent. This illustrated how wait() and waitpid() prevent zombie processes.
+
+Overall, these exercises helped me understand process behavior, the role of synchronization, cleanup mechanisms, and how the OS manages child processes. The code for all assignments is pushed to my GitHub repository
+https://github.com/serzh200419/Homework03.git
